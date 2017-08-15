@@ -26,7 +26,6 @@ public class UsersServlet extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String type=request.getParameter("type");
-		//此处请根据方法名和参数直接找到指定的方法,大家去实现
 		for (Method mt: c.getDeclaredMethods()) {
 			if (mt.getName().equalsIgnoreCase(type)) {
 				try {
